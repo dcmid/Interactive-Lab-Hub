@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -170,15 +170,15 @@
 <text x="5.715" y="13.97" size="1.27" layer="25" font="fixed">d</text>
 <text x="3.175" y="19.685" size="1.27" layer="25" font="fixed">g</text>
 <text x="42.545" y="7.62" size="1.27" layer="25" font="fixed" rot="R90">Resistor</text>
-<text x="11.43" y="8.89" size="1.27" layer="27" font="fixed" rot="R90">Diode</text>
 <text x="48.26" y="1.905" size="1.27" layer="25" font="fixed">Vo</text>
 <text x="51.435" y="1.905" size="1.27" layer="25" font="fixed">gnd</text>
-<text x="0.635" y="1.905" size="1.27" layer="25" font="fixed">Vcc</text>
-<text x="3.175" y="0.635" size="1.27" layer="25" font="fixed">gnd</text>
-<text x="6.985" y="1.905" size="1.27" layer="25" font="fixed">pwm</text>
+<text x="1.905" y="2.54" size="1.27" layer="25" font="fixed" rot="R315">Vcc</text>
+<text x="4.445" y="2.54" size="1.27" layer="25" font="fixed" rot="R315">gnd</text>
+<text x="6.985" y="2.54" size="1.27" layer="25" font="fixed" rot="R315">pwm</text>
 <text x="17.78" y="10.16" size="2.54" layer="25" font="fixed">BUCK</text>
 <text x="17.78" y="6.35" size="2.54" layer="25" font="fixed">STOPS</text>
 <text x="17.78" y="2.54" size="2.54" layer="25" font="fixed">HERE</text>
+<text x="11.43" y="9.525" size="1.27" layer="25" rot="R90">Diode</text>
 </plain>
 <libraries>
 <library name="capacitor-wima" urn="urn:adsk.eagle:library:116">

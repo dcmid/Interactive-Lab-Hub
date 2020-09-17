@@ -1,4 +1,4 @@
-Partlist exported from C:/Users/dclay/OneDrive/Fall 2020/Interactive Device Design/Labs/Interactive-Lab-Hub/alt-Lab2/submission/board_files/buck_converter.sch at 9/17/2020 11:23 AM
+Partlist exported from C:/Users/dclay/OneDrive/Fall 2020/Interactive Device Design/Labs/Interactive-Lab-Hub/alt-Lab2/submission/board_files/buck_converter.sch at 9/17/2020 12:37 PM
 
 Qty Value      Device       Package    Parts Description                                     MF    MPN        OC_FARNELL OC_NEWARK POPULARITY SPICEPREFIX
 1              C2.5/2       C2.5-2     C13   CAPACITOR                                                                             28                    

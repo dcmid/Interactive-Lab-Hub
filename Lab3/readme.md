@@ -6,13 +6,13 @@
 1. Read through the lab below
 
 
-2. DESIGN READING: 
+2. DESIGN READING:
 
-* [Paper prototyping](https://www.uxpin.com/studio/blog/paper-prototyping-the-practical-beginners-guide/) is used by UX designers to quickly develop interface ideas and run them by people before any programming occurs. 
+* [Paper prototyping](https://www.uxpin.com/studio/blog/paper-prototyping-the-practical-beginners-guide/) is used by UX designers to quickly develop interface ideas and run them by people before any programming occurs.
 
-* [Cardboard prototypes](https://www.youtube.com/watch?v=k_9Q-KDSb9o) help interactive product designers to work through additional issues, like how big something should be, how it could be carried, where it would sit. 
+* [Cardboard prototypes](https://www.youtube.com/watch?v=k_9Q-KDSb9o) help interactive product designers to work through additional issues, like how big something should be, how it could be carried, where it would sit.
 
-* [Surprisingly complicated forms](https://www.pinterest.com/pin/50032245843343100/) can be built with paper, cardstock or cardboard. The most advanced and challenging prototypes to prototype with paper are [cardboard mechanisms](https://www.pinterest.com/helgangchin/paper-mechanisms/) which move and change. 
+* [Surprisingly complicated forms](https://www.pinterest.com/pin/50032245843343100/) can be built with paper, cardstock or cardboard. The most advanced and challenging prototypes to prototype with paper are [cardboard mechanisms](https://www.pinterest.com/helgangchin/paper-mechanisms/) which move and change.
 
 <img src="https://dysonthedesigner.weebly.com/uploads/2/6/3/9/26392736/427342_orig.jpg"  width="200" > Dyson Vacuum cardboard prototypes
 
@@ -37,21 +37,21 @@
 | Hot glue                      | Adhesion                                 | Hot glue makes a solid bond, solidifies quickly, and is removable from porous surfaces.                                                                                                           |
 | Heatshrink                    | Electrical insulation                    | Heatshrink covers bare wires to prevent accidental conduction to reduce the risk of short circuits.  Shrink the heat shrink with a hair dryer, lighter, match or proximity to the soldering iron. |
 
-5. Find cardboard for lab. 
+5. Find cardboard for lab.
 
 
 ## Overview
-For this assignment, you are going to 
+For this assignment, you are going to
 
-A) [Actuating DC Motors](#part-a-actuating-dc-motors) 
+A) [Actuating DC Motors](#part-a-actuating-dc-motors)
 
-B) [Actuating Servo Motors](#part-b-actuating-servo-motors) 
+B) [Actuating Servo Motors](#part-b-actuating-servo-motors)
 
 C) [Integrating Input and Output](#part-c-integrating-input-and-output)
 
 D) [Autonomy!](#part-d-autonomy)
 
-E) [Paper Display](#part-e-paper-display) 
+E) [Paper Display](#part-e-paper-display)
 
 F) [Make it your own](#part-f-make-it-your-own)
 
@@ -70,7 +70,7 @@ Deliverables are due next Tuesday. Post a link to the wiki page on your main cla
 ## Part A. Actuating DC motors
 
 
-Your kit has a vibration motor. Vibration motors are actually DC motors that have an asymmetrical weight on the main rotor, which causes the device to shake when power is applied and the motor rotates. 
+Your kit has a vibration motor. Vibration motors are actually DC motors that have an asymmetrical weight on the main rotor, which causes the device to shake when power is applied and the motor rotates.
 
 ![image of vibration motor](https://cdn-shop.adafruit.com/145x109/1201-01.jpg)
 
@@ -87,15 +87,15 @@ The potentiometer tells the feedback circuit the servo’s current position, and
 
 ### Part 1. Connect the Servo to your breadboard
 
-Servo motors generally have 3 wires; power, ground and signal. [Here](https://www.adafruit.com/product/169) is the product page for the servos in your kit. 
+Servo motors generally have 3 wires; power, ground and signal. [Here](https://www.adafruit.com/product/169) is the product page for the servos in your kit.
 
 **a. Which color wires correspond to power, ground and signal?**
 
-Connect the servo to your breadboard, supplying power and ground to the appropriate pins. 
+Connect the servo to your breadboard, supplying power and ground to the appropriate pins.
 
 ### Part 2. Connect the Servo to your Arduino
 
-Now open the [Sweep](https://www.arduino.cc/en/Tutorial/Sweep) sketch in the Arduino IDE. 
+Now open the [Sweep](https://www.arduino.cc/en/Tutorial/Sweep) sketch in the Arduino IDE.
 
 ```File > Examples > Servo > Sweep```
 
@@ -109,8 +109,8 @@ Change some parameters in the sketch to make the servo sweep slower, or over a s
 ## Part C. Integrating input and output
 
 Using what you've learned already, write code to control the servo motor circuit, either:
-* adjusting the servo motor rotation to reflect the reading on a potentiometer voltage divider circuit, (Yes, it is fine to use any other analog voltage sensor!), or, 
-* reflecting pre-programmed actions you design. 
+* adjusting the servo motor rotation to reflect the reading on a potentiometer voltage divider circuit, (Yes, it is fine to use any other analog voltage sensor!), or,
+* reflecting pre-programmed actions you design.
 
 ## Part D. Autonomy!
 
@@ -137,9 +137,9 @@ It holds a breadboard and 9v battery, and provides a front stage on which to put
 This design can be made by scoring a long strip of corrugated cardboard of width X, with the following measurements:
 
 | Y height of box <br> <sub><sup>- thickness of cardboard</sup></sub> | Z  depth of box <br><sub><sup>- thickness of cardboard</sup></sub> | Y height of box  | Z  depth of box | H height of faceplate |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 
-Fold the first flap of the strip so that it sits flush against the back of the face plate, and tape, velcro or hot glue it in place. This will make a H x X interface, with a box of Z x X footprint (which you can adapt to the things you want to put in the box) and a height Y in the back. 
+Fold the first flap of the strip so that it sits flush against the back of the face plate, and tape, velcro or hot glue it in place. This will make a H x X interface, with a box of Z x X footprint (which you can adapt to the things you want to put in the box) and a height Y in the back.
 
 Make a paper display that uses the servo to show how many times a button on the front has been pressed (or any other thing you can sense or count). Ideally you should design it so that you can slide the breadboard out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
 
@@ -148,7 +148,7 @@ Make a paper display that uses the servo to show how many times a button on the 
 
 ## Part F. Make it your own
 
-Now modify this set up to make this your own design. 
+Now modify this set up to make this your own design.
 
 Use paper to build a paper template. Use an Olfa knifes to cut out your pattern, and glue or tape to put it together. <!--If you'd like to use the paper cutter, [here's how](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/How-to-use-the-Silhouette-Cameo-Cutter).-->
 
