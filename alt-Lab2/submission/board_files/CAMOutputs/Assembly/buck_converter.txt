@@ -1,0 +1,10 @@
+Partlist exported from C:/Users/dclay/OneDrive/Fall 2020/Interactive Device Design/Labs/Interactive-Lab-Hub/alt-Lab2/submission/board_files/buck_converter.sch at 9/17/2020 11:23 AM
+
+Qty Value      Device       Package    Parts Description                                     MF    MPN        OC_FARNELL OC_NEWARK POPULARITY SPICEPREFIX
+1              C2.5/2       C2.5-2     C13   CAPACITOR                                                                             28                    
+1              R-EU_0207/10 0207/10    R4    RESISTOR, European symbol                                                             81         R          
+1   1N4004     1N4004       DO41-10    D2    DIODE                                                                                 82                    
+1   22-23-2021 22-23-2021   22-23-2021 O     .100" (2.54mm) Center Header - 2 Pin            MOLEX 22-23-2021 1462926    25C3832   40                    
+1   22-23-2031 22-23-2031   22-23-2031 I     .100" (2.54mm) Center Header - 3 Pin            MOLEX 22-23-2031 1462950    30C0862   35                    
+1   BSS101     BSS101       TO92       Q3    N-Channel Enhancement MOSFET 200V; 0,16A; 11Ohm                                       1                     
+1   LBC15      LBC15        LBC15      L2    INDUCTOR                                                                              0          L          
