@@ -24,11 +24,13 @@ My code can be found [here](./code/servo_pot/servo_pot.ino)\.
 
 **Include a photo/movie of your autonomous device in action.**  
 
+My code can be found [here](./code/servo_pot/servo_pot.ino)\.  
 A video of my device can be found [here](./media/servo_pot.mp4)\.
 
 ## Part E. Paper display
 **a. Make a video of your paper display in action.**
 
+My code can be found [here](./code/servo_count/servo_count.ino)\.  
 The video can be found [here](./media/servo_count.mp4)\.
 
 ## Part F. Make it your own
@@ -37,4 +39,5 @@ I modified my previous design to track the time between button presses, acting l
 
 **a. Make a video of your final design in action.**  
 
+My code can be found [here](./code/servo_race/servo_race.ino)\.  
 The video can be found [here](./media/servo_speed.mp4)\.
