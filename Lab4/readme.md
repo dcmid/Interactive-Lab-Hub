@@ -102,6 +102,7 @@ Now experiment with the [flex sensor (Optional)](https://www.adafruit.com/produc
 
 **b. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
 
+Control the colors of the LED using the above sensors ( including FSR )
 
 ## Part D. I2C Sensors 
 
@@ -116,8 +117,8 @@ Unlike the other parts we've used to date, this is a "smart sensor" which can co
  
 [This example code](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino) is meant to read values from a 3-axis accelerometer out to a computer over the serial monitor. Test it out! Hint: make sure to read the I2C Wiring section carefully, because the picture uses a different kind of Arduino. Here's a Fritzing diagram of the correct wiring:
 
-[[images/LIS3DH_breadboard.png]]
- 
+https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/master/Lab4/LIS3DH_breadboard.JPG
+
 Adapt the code to indicate what your readings are on the X, Y and Z axes of the accelerometer on your 16x2 LCD panel.
 
 Now set up the RGB LED so that each color is mapped to the X, Y and Z axes accelerations.
@@ -130,7 +131,7 @@ Get a feel for the data the accelerometer provides. Pick up the Arduino+accelero
 ## Part E. Logging values to the EEPROM and reading them back
  
 ### 1. Reading and writing values to the Arduino EEPROM
-The sample code in `File->Examples->EEPROM` shows functions from the [Arduino EEPROM Library](https://www.arduino.cc/en/Reference/EEPROM) to write and read values to Arduino's EEPROM. This [modified version of the SwitchState code](code/SwitchState2.zip) employs these functions in three different states. Try it out.
+The sample code in `File->Examples->EEPROM` shows functions from the [Arduino EEPROM Library](https://www.arduino.cc/en/Reference/EEPROM) to write and read values to Arduino's EEPROM. This [modified version of the SwitchState code](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/master/Lab4/SwitchState) employs these functions in three different states. Try it out.
 
 **a. Does it matter what actions are assigned to which state? Why?**
 
