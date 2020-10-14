@@ -88,6 +88,8 @@ My data logger will constantly record input voltage at regular increments, overw
 
 My code can be found [here](./code/data_logger/data_logger.ino)\.
 
+A video can be found [here](./media/data_logger.mp4)\.
+
 
 # Lab5
 
