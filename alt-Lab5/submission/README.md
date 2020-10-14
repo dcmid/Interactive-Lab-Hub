@@ -55,31 +55,34 @@ A video can be found [here](./media/accel_oled.mp4)\.
 ### 1. Reading and writing values to the Arduino EEPROM
 The sample code in `File->Examples->EEPROM` shows functions from the [Arduino EEPROM Library](https://www.arduino.cc/en/Reference/EEPROM) to write and read values to Arduino's EEPROM. This [modified version of the SwitchState code](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/master/Lab4/SwitchState) employs these functions in three different states. Try it out.
 
-**a. Does it matter what actions are assigned to which state? Why?**
+**a. Does it matter what actions are assigned to which state? Why?**  
+Clearly, it would affect behavior. In this specific example, the code clears data when the input is low, writes data when the input is high, and reads when the input is intermediate.
 
-**b. Why is the code here all in the setup() functions and not in the loop() functions?**
+Switching these up could cause issues, for example, if the clear state was placed in the middle. Then, because the potentiometer cannot immediately change values, it would be impossible to ever read out the data that was written, as clear would always happen between them.
+
+**b. Why is the code here all in the setup() functions and not in the loop() functions?**  
+Each state executes only once before returning to the SwitchState code.
 
 Each character in the string is a byte. That is, it takes 8-bits to encode a character, so the number of characters in the string we are writing is the number of bytes we are occupying in EEPROM. The [Atmega 328P](https://www.microchip.com/wwwproducts/en/atmega328p) at the heart of the Arduino has 1024 bytes of internal [EEPROM](http://en.wikipedia.org/wiki/EEPROM) Memory (which is separate from the 32KB of [Program memory](https://en.wikipedia.org/wiki/Read-only_memory) it has for the code it is running.)
 
-**c. How many byte-sized data samples can you store on the Atmega328?**
+**c. How many byte-sized data samples can you store on the Atmega328?**  
+1024 samples  
 
-**d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
+**d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**  
+Limit or scale it to an 8-bit range (0-255) and cast to a byte.
+
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
+Store it across consecutive memory addresses
 
 Modify the code to take in analog values from your sensors and print them back out to the Arduino Serial Monitor.
 
-### 2. Design your logger
-You've been thinking at a high level about a data logger and what it is used for; now you need to adapt that to the specific implementation.
-
-
-A lot of the art of data logging is being clever about how to use the sensor. Feel free to engage the teaching team for advice.
-
-Your data logger will have two main modes: one where it logs data and another where it plays the data back. Think a little about what sensors you would like to log data from and how you would like to display your data. Create a state diagram sketch that indicates how you'd like to switch between one mode and the other, and also what you'd like the program to do in each state. This can help you decide what buttons or knobs might be useful for your design.
-
-You might make changes to your design before this lab is complete.
+### 2. Design your logger  
+My data logger will constantly record input voltage at regular increments, overwriting past measurements as required. When a pushbutton is activated, the recorded data will be displayed by varying the brightness of an LED.
 
 **a. Turn in a copy of your final state diagram.**
+
+![](./media/state_diagram.png)
 
 ## Part G. Create your own data logger!
 Now it's up to you to integrate the software and hardware necessary to interface with your data logger! Your logger should be able to record a stream of analog data (at a sample rate of your desire) and then play it back at some later point in time on your display of choice.
