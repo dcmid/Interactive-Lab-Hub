@@ -73,21 +73,20 @@ Limit or scale it to an 8-bit range (0-255) and cast to a byte.
 
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
-Store it across consecutive memory addresses
-
-Modify the code to take in analog values from your sensors and print them back out to the Arduino Serial Monitor.
+Store it across consecutive memory addresses or scale it down to a byte.
 
 ### 2. Design your logger  
-My data logger will constantly record input voltage at regular increments, overwriting past measurements as required. When a pushbutton is activated, the recorded data will be displayed by varying the brightness of an LED.
+My data logger will constantly record input voltage at regular increments, overwriting past measurements as required. When a pushbutton is activated, the recorded data will be displayed by varying the brightness of an LED over time.
 
 **a. Turn in a copy of your final state diagram.**
 
 ![](./media/state_diagram.png)
 
 ## Part G. Create your own data logger!
-Now it's up to you to integrate the software and hardware necessary to interface with your data logger! Your logger should be able to record a stream of analog data (at a sample rate of your desire) and then play it back at some later point in time on your display of choice.
 
 **a. Record and upload a short demo video of your logger in action.**
+
+My code can be found [here](./code/data_logger/data_logger.ino)\.
 
 
 # Lab5
