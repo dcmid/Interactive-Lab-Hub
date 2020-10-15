@@ -19,7 +19,7 @@ int a_in;
 int iter;
 byte data;
 void loop() {
-  if(state == 0){ //state 0-record
+  if(!state){ //state 0-record
     a_in = analogRead(A0); //read analog input
     data = a_in << 2; //drop 2 bits from 10-bit ADC value to get byte for EEPROM
     EEPROM.write(addr, data); //write to EEPROM
