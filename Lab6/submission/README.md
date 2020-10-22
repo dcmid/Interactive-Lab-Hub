@@ -192,17 +192,9 @@ cd pi-object-detection/
 
 ### Try some Python code on the Pi
 
-We will be using Python in future modules, so try running some of the sample python code in ``python_games``:
-
-``wormy.py``
-``catanimation.py``
-``tetromino.py``
-
-Take a look at the code in the python file, using ``cat``, or ``nano``.
-
-Also try the shellscripts in the ``textToSpeech`` directory.
-
 **How do you know what the shell script is doing?**
+
+Opening the shell scripts in vi reveals them to have fairly simply and readably import the respective tools and then call them with the desired text. Changing what they say is as simple as replacing the text in the call.
 
 Adapt the scripts so that they say what you want them to say.
 
