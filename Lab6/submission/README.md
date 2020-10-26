@@ -1,5 +1,5 @@
 # Lab 6  
-**Record the IP address and the MAC address for the RPi.**
+**Record the IP address and the MAC address for the RPi.**  
 192.168.1.161  
 B8:27:EB:C3:A8:8A  
 
