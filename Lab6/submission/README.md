@@ -7,7 +7,7 @@ B8:27:EB:C3:A8:8A
 
 **How do you know what the shell script is doing?**
 
-Opening the shell scripts in vi reveals them to fairly simply and readably import the respective tools and then call them with the desired text. Changing what they say is as simple as replacing the text in the call.
+Opening the shell scripts in vim reveals them to fairly simply and readably import the respective tools and then call them with the desired text. Changing what they say is as simple as replacing the text in the call.
 
 Adapt the scripts so that they say what you want them to say.
 
@@ -51,16 +51,6 @@ python3 pi_words.py raspi.wav
 
 ## Connect the Arduino and the RPi
 
-Connect your Arduino board to your RPi using a short USB cable.
-Now, on the RPi, run the Arduino program:
-
-```shell
-pi@ixe00:~ $ arduino
-```
-
-Use the Arduino IDE to flash Blink onto the Arduino. Don’t forget to set the port!
-
-Now, try adding a sensor and checking that you can read the value on the RPi using the Serial Monitor.
 
 ### Hello Pi, Hello Arduino
 
@@ -81,15 +71,11 @@ You could either attach a sensor to the Arduino and only output the message if t
 
 **How could you make it so that the Pi would say different things based on different sensor values read by the Arduino?**  
 Pass the sensor data from the Arduino to the RPi over serial, and have a simple if statement based on that data that depermines what is output.
+
 ## Your own voice agent
-
-Program a simple application that understands different basic greetings (for example, Yo!, Good morning! And Good afternoon!) and responds either visibly, physically or auditorily in kind!
-
-You are free to adapt this assignment to have the agent respond to any other set of vocabulary for any other purpose.
 
 **Record someone trying out your design**
 
-Using a phone or other video device, record someone trying out your GreetingBot. (This does not need to be an advertisement for your ChatBot; it is okay if the person is confused or asks questions or doesn't like it. We like the drama. Do not record someone using the default ChatBot.) Post the video to your README.md page!
+My recording can be found [here](./media/chatbot.mp4)\.  
 
-**Submit your code to Github**  
-The code should be run from inside the same directory
+**Submit your code to Github**
