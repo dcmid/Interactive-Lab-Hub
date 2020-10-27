@@ -1,87 +1,39 @@
 ## Serving webpages with the Raspberry Pi
 
-To use the Raspberry Pi as a webserver, we’re going to install a python-based webserver named Flask.:
-```shell
-pi@ixe00:~/helloWorld $ cat basicserver.py
-from flask import Flask
+**Customize the code enough that the webpage served up is clearly your own, and include a screenshot and any modified code in the lab folder.**
 
-app = Flask(__name__)
+![](./media/darrenserver.png)
 
-@app.route('/')
-def index():
-    return 'Hello world'
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
-
-
-pi@ixe00:~/helloWorld $ python basicserver.py
- * Serving Flask app "basicserver" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: on
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 162-573-883
-```
-From a remote browser, check to make sure your webserver is working.
-
-** customize the code enough that the webpage served up is clearly your own, and include a screenshot and any modified code in the lab folder. **
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/Screen%20Shot%202020-10-20%20at%207.39.12%20PM.png" width="800px">
-
-## Set up and Run Interaction Engine
-
-For this exercise, we will set up and run HelloYou the basic Interaction Engine. This is like HelloWorld, but is called HelloYou because it is designed to be interactive and to connect actions and responses across distance.
-
-![](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/IxE_Explanation_python.gif?raw=true)
-
-HelloYou has 3 parts:
-1. The Arduino sketch, `helloYou.ino` that is installed and runs on the Arduino.
-1. The Python code, `server.py`, that is installed and runs on the Raspberry Pi.
-1. The html file and associated javascript code, `index.html` and `client.js`, which is served by the Raspberry Pi server to the client browser, and runs on the client’s computer.
+My code can be found [here](./code/darrenserver.py).
 
 ### Flash the HelloYou Sketch onto the Arduino
 
-Make sure your arduino is connected to your Raspberry Pi with a USB cable. Using the Arduino IDE on the Raspberry Pi, open `helloYou/helloYou.ino`.
+**What messages are sent from the Arduino to the Pi?**  
+The Arduino writes the current state of the button ('light' or 'dark') over serial.
 
-Look at the code. How does the Arduino communicate with the Pi when the code is running?
-** What messages are sent from the Arduino to the Pi? **
-** What messages are expected from the Pi to the Arduino? **
-** What happens if the Pi sends an unexpected message to the Arduino? **
-** How fast does the Arduino communicate with the Pi? What would you change to make it send messages less often? **
+**What messages are expected from the Pi to the Arduino?**  
+The Pi writes 'H' or 'L' over serial whenever an input comes to the server.
 
-Compile and flash the `helloYou.ino` code onto the Arduino.
+**What happens if the Pi sends an unexpected message to the Arduino?**  
+The LED is turned off. This is because the Arduino code uses an if else statement, so all inputs that don't satisfy the if condition will fall through to the else.
+
+**How fast does the Arduino communicate with the Pi? What would you change to make it send messages less often?**  
+It communicates at 9600 baud. The Arduino only sends messages when the button state changes. So, to send messages less often, press the button more slowly. To send messages more slowly, lower the baud rate.
 
 ### Run the HelloYou server on the RPi
 
-Using your favorite text editor, open `helloYou/server.py`.
+**What messages are sent from the Pi to the Arduino?**  
+The Pi writes 'H' or 'L' over serial whenever an input comes to the server.
 
-Look at the code. What interface does the Pi use to communicate with the Arduino when the code is running?
-What messages are sent from the Pi to the Arduino?
-What messages are expected from the Arduino to the Pi?
-What happens if the Arduino sends an unexpected message to the Pi?
-What part of the code controls what is served when a browser requests a page from the server?
-What messages are sent to the console? When?
+**What messages are expected from the Arduino to the Pi?**  
+The Arduino writes the current state of the button ('light' or 'dark') over serial.
 
-```
-pi@ixe00:~/helloYou $ python server.py
- * Serving Flask app "server" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-```
-Now pull up a web browser on your computer, and look at the webpage being served on the Raspberry Pi on port 5000:
 
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/Screen%20Shot%202020-10-20%20at%208.05.39%20PM.png" width="800px">
+**What happens if the Arduino sends an unexpected message to the Pi?**  
+Nothing happens. This is because the js explicitly checks for both expected messages in a switch statement, so an unexpected value simply falls through without executing any code.
 
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/Screen%20Shot%202020-10-20%20at%208.33.33%20PM.png" width="800px">
-
-The browser shows the webpage that we loaded, and is also running the associated `client.js` file.
+**What messages are sent to the console? When?**  
+"ledOn" and "ledOff" are printed when the led is toggled
 
 ## Internet of Cornell Tech Things
 
